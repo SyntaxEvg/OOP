@@ -34,6 +34,7 @@ if (Sum>0)
         Console.WriteLine($"Тек. баланс {client.Balance}");
         client.SpendMoney(50);// потратить  50
         Console.WriteLine($"Тек. баланс {client.Balance}");
+
     }
 
     Console.WriteLine();
