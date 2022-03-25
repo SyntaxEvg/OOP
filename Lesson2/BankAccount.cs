@@ -19,10 +19,30 @@ namespace Lesson2
         /// </summary>
         private AccountType _accountType;
 
+        private string nameUser;
+
+        public string NameUser
+        {
+            get { return nameUser; }
+            set { nameUser = value; }
+        }
+        public bool Transaction(BankAccount bankAccount, decimal money)
+        {
+            bool ToClientBalance =this.SpendMoney(money) > 0;
+            if (ToClientBalance)
+            {
+                bankAccount.PutMoney(money);//кладем товарищу на счет
+                return true;
+            }
+            return false;
+        }
+
+
 
         public override string ToString()
         {
-            return $"Номер счета: {AccountNumber};" +
+            return $"Клиент: {nameUser}" +
+                $"Номер счета: {AccountNumber};" +
                 $" Тип счета: {_accountType}; " +
                 $"Остаток: {balance}.";
         }
@@ -48,13 +68,15 @@ namespace Lesson2
         {
             Balance = 0;
             _accountType = AccountType.Deposit;
+          
         }
 
-        public BankAccount(decimal bal)
+        public BankAccount(decimal bal,string User)
         {
             AccountNumber = Guid.NewGuid();
             Balance = bal;
             _accountType = AccountType.Deposit;
+            NameUser = User;
         }
 
         public BankAccount(AccountType accountType)
@@ -64,20 +86,20 @@ namespace Lesson2
             _accountType = accountType;
         }
 
-        public BankAccount(decimal balance, AccountType accountType)
+        public BankAccount(decimal balance, AccountType accountType,string User)
         {
             AccountNumber = Guid.NewGuid();
             Balance = balance;
             _accountType = accountType;
+            NameUser = User;
         }
         /// <summary>
         /// потратить деньги
         /// </summary>
-        /// <param name="money"></param>
-        /// <returns></returns>
         public decimal SpendMoney(decimal money)
         {
-            if (Balance < money) return 0;
+            if (Balance < money) 
+                return 0;
             Balance -= money;
             return money;
         }
