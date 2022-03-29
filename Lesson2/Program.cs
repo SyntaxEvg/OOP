@@ -41,7 +41,6 @@ while (true)
                 break;
         }
     }
-
 }
 /// <summary>
 /// Урок 3, занятие 2
@@ -49,7 +48,7 @@ while (true)
 void RisversArrayList()
 {
     Console.WriteLine("Введите строку, которую надо перевернуть");
-    string str = Console.ReadLine();
+    string str = Console.ReadLine()!;
     if (str.Length>0 )
     {       
         Console.WriteLine(str.RString());
