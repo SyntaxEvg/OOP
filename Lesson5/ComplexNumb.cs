@@ -36,12 +36,7 @@
     {
         if (x is null || y is null)
             return true;
-
-        var differenceReal = Math.Abs(x.XReal);
-        var differenceImaginary = Math.Abs(x.yi);
-
-        return Math.Abs(x.XReal - y.XReal) > differenceReal ||
-               Math.Abs(x.yi - y.yi) > differenceImaginary;
+        return Math.Abs(x.XReal - y.XReal) > Math.Abs(x.XReal) || Math.Abs(x.yi - y.yi) > Math.Abs(x.yi);
     }
 
     public override bool Equals(object? obj)
