@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 namespace Lesson2
 {
 
-    internal class BankAccount
+    public class BankAccount
     {/// <summary>
      /// номер счета
      /// </summary>
-        private Guid accountNumber;
+        private Guid _accountNumber;
         private decimal balance;
 
         /// <summary>
@@ -50,11 +50,11 @@ namespace Lesson2
         public Guid AccountNumber { 
             get
             {
-                return accountNumber;
+                return _accountNumber;
             }
             set
             {
-                accountNumber = value;
+                _accountNumber = value;
             }
 
         }
@@ -108,7 +108,40 @@ namespace Lesson2
         {
             Balance += money;
         }
+        ////////// 6 урок
+        /// <summary>
+        /// сравнение ауккаунтов
+        /// </summary>
+        public static bool operator ==(BankAccount client1, BankAccount client2)
+        {
+            if (client1 is null || client2 is null)
+                return false;
 
-        
+            return client1._accountNumber == client2._accountNumber;
+        }
+
+        public static bool operator !=(BankAccount client1, BankAccount client2)
+        {
+            if (client1 is null || client2 is null)
+                return true;
+
+            return client1._accountNumber != client2._accountNumber;
+        }
+
+        public override bool Equals(object? obj) {
+            return Equals(obj is BankAccount);
+                }
+
+        public bool Equals(BankAccount other)
+        {
+            return other != null && this._accountNumber == other._accountNumber;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(_accountNumber);
+        }
+
+
     }
 }

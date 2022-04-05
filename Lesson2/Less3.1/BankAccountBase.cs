@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lesson2.Less3._1
 {
-    internal class BankAccountBase
+    public class BankAccountBase
     {
         public void BankAccount()
         {

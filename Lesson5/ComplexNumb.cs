@@ -9,7 +9,7 @@
         this.yi = v2;
     }
     public static ComplexNumb operator +(ComplexNumb x, ComplexNumb y)
-    { 
+    {
         return new(x.XReal + y.XReal, x.yi + y.yi);
     }
 
@@ -18,7 +18,7 @@
         return new(x.XReal - y.XReal, x.yi - y.yi);
     }
     public static ComplexNumb operator *(ComplexNumb x, ComplexNumb y)
-    { 
+    {
         return new(x.XReal * y.XReal - x.yi * y.yi, x.XReal * y.XReal + x.XReal * y.yi);
     }
 
@@ -30,7 +30,7 @@
                Math.Abs(x.yi - y.yi) <= Math.Abs(x.yi);
         }
         return false;
-        
+
     }
     public static bool operator !=(ComplexNumb x, ComplexNumb y)
     {
