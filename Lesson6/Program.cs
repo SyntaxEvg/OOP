@@ -34,7 +34,7 @@ while (true)
                 ComparinginformationAccounts(ref random);//Создать класс рациональных чисел
                 break;
             case 2:
-                CreateFigureGeometricShapes(ref random);// На перегрузку операторов.
+                CreateFigureGeometricShapes();// На перегрузку операторов.
                 break;
             case 6:
                 Environment.Exit(0);
@@ -63,7 +63,7 @@ void ComparinginformationAccounts(ref Random random)
 /// <summary>
 /// работа с фигурами
 /// </summary>
-void CreateFigureGeometricShapes(ref Random random)
+void CreateFigureGeometricShapes()
 {
     var pointCenter = new System.Drawing.Point() { X = 0, Y = 0 };
     var circleCenter = new System.Drawing.Point() { X = 3, Y = 3 };

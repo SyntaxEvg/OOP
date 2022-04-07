@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-internal sealed class Rectangle : Point
+public sealed class Rectangle : Point
 {
     private int _width;
     private int _height;

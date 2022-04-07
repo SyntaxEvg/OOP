@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SplitClass_Buiding", "Split
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson5", "Lesson5\Lesson5.csproj", "{A4B14A18-5129-447D-9D7D-E619AF29BE00}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson6", "Lesson6\Lesson6.csproj", "{AD19A111-2B62-422A-AF62-01BD9CFC630E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson6", "Lesson6\Lesson6.csproj", "{AD19A111-2B62-422A-AF62-01BD9CFC630E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson7", "Lesson7\Lesson7.csproj", "{2E32FA35-9576-42B1-833E-9E3549431D2B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{AD19A111-2B62-422A-AF62-01BD9CFC630E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD19A111-2B62-422A-AF62-01BD9CFC630E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD19A111-2B62-422A-AF62-01BD9CFC630E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E32FA35-9576-42B1-833E-9E3549431D2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E32FA35-9576-42B1-833E-9E3549431D2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E32FA35-9576-42B1-833E-9E3549431D2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E32FA35-9576-42B1-833E-9E3549431D2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

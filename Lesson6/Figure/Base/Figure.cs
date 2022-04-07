@@ -2,7 +2,7 @@
 
 using System.Drawing;
 using System.Drawing;
-public class Figure
+public class Figure : IFigure
 {/// <summary>
 /// цвет фигуры
 /// </summary>

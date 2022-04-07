@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-internal sealed class Circle : Point
+public sealed class Circle : Point
 {
     private double _radius;
     private const int Precision = 4;
